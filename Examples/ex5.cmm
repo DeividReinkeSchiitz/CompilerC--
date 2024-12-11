@@ -1,0 +1,46 @@
+int sum(int a, int b) {
+    int result;
+    result = a + b;
+    return result;
+}
+
+void printMessage(void) {
+    char message[20];
+    char output[20];
+    int i;
+
+    message[0] = 'O';
+    message[1] = 'i';
+    message[2] = '\0';
+
+    while (message[i] != '\0') {
+        output[i] = message[i];
+        i = i + 1;
+    }
+    output[i] = '\0';
+}
+
+
+int main(void) {
+    int x, y, z;
+    int i;
+
+    x = 10;
+    y = 20;
+        z = sum(x, y);
+    } else {
+        z = x;
+    }
+
+    while (z > 0) {
+        z = z - 1;
+    }
+    
+    for (i = 0; i < 10; i = i + 1) {
+        z = z + i;
+    }
+
+    printMessage();
+
+    return z;
+}
