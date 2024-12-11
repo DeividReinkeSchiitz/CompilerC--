@@ -24,7 +24,7 @@ void Parser::match(int t)
     if (lToken->name == t || lToken->attribute == t)
         advance();
     else
-        error("Erro: experado " + to_string(t) + ". Token encontrado: " + to_string(lToken->name) + ", lexeme:  " + lToken->lexeme);
+        error("Error: expected " + to_string(t) + ". Token founded: " + to_string(lToken->name) + ", lexeme:  " + lToken->lexeme);
 }
 
 void Parser::run()
@@ -32,7 +32,7 @@ void Parser::run()
     advance();
     program();
     match(END_OF_FILE);
-    std::cout << "Compilação bem sucedida!" << std::endl;
+    std::cout << "Compiled Successfull!" << std::endl;
 }
 
 
@@ -473,6 +473,6 @@ void Parser::prefixExpression()
 
 void Parser::error(string str)
 {
-    cout << "Linha " << scanner->getLine() << ": " << str << endl;
+    cout << "Line " << scanner->getLine() << ": " << str << endl;
     exit(EXIT_FAILURE);
 }
